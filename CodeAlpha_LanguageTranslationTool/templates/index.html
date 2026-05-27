@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Language Translation Tool</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Language Translation Tool</h1>
+        <p class="subtitle">Translate text from one language to another using a Python backend.</p>
+
+        <label for="textInput">Enter Text</label>
+        <textarea id="textInput" placeholder="Type text here..."></textarea>
+
+        <div class="language-row">
+            <div>
+                <label for="sourceLanguage">Source Language</label>
+                <select id="sourceLanguage">
+                    <option value="auto">Auto Detect</option>
+                    <option value="english">English</option>
+                    <option value="french">French</option>
+                    <option value="spanish">Spanish</option>
+                    <option value="portuguese">Portuguese</option>
+                    <option value="german">German</option>
+                    <option value="chinese">Chinese</option>
+                    <option value="arabic">Arabic</option>
+                    <option value="shona">Shona</option>
+                    <option value="zulu">Zulu</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="targetLanguage">Target Language</label>
+                <select id="targetLanguage">
+                    <option value="english">English</option>
+                    <option value="french">French</option>
+                    <option value="spanish">Spanish</option>
+                    <option value="portuguese">Portuguese</option>
+                    <option value="german">German</option>
+                    <option value="chinese">Chinese</option>
+                    <option value="arabic">Arabic</option>
+                    <option value="shona">Shona</option>
+                    <option value="zulu">Zulu</option>
+                </select>
+            </div>
+        </div>
+
+        <button onclick="translateText()">Translate</button>
+
+        <div id="message"></div>
+
+        <div class="output-box">
+            <h2>Translated Text</h2>
+            <p id="translatedOutput">Your translation will appear here.</p>
+        </div>
+
+        <div class="button-row">
+            <button class="secondary" onclick="copyText()">Copy Translation</button>
+            <button class="secondary" onclick="speakText()">Listen</button>
+        </div>
+    </div>
+
+    <script src="../static/script.js"></script>
+</body>
+</html>
